@@ -8,9 +8,10 @@ var app = module.exports = express.createServer();
 
 // Don't crash on errors.
 process.on("uncaughtException", function(error) {
-  util.log(error.stack);
+    util.log(error.stack);
 });
 
+/*
 app.configure(function(){
         app.set('views', __dirname + '/views');
         app.set('view engine', 'jade');
@@ -20,6 +21,7 @@ app.configure(function(){
         app.use(app.router);
         app.use(express.static(__dirname + '/public'));
         });
+*/
 
 app.configure('development', function(){
         app.use(express.errorHandler({ dumpExceptions: true, showStack: true })); 
@@ -45,7 +47,8 @@ app.all('/*',function(req, res, next) {
 });
 
 app.get('/', function(req, res){
-      res.render('index', { title: 'StaticMole Based on Jshint' });
+      //res.render('index', { title: 'StaticMole Based on Jshint' });
+      res.send('Here must be front-end');
 });
 
 app.post('/report/', function(req, res, next) {
