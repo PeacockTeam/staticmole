@@ -79,7 +79,7 @@ function getreport(url, report){
     var jshintRun="jshint test > reports\\"+url+".txt"; 
     exec(jshintRun, function (error) {
       console.log("analize done");
-      fs.readFile('2.txt', 'utf8', function (err, data) {
+      fs.readFile("reports\\"+url+".txt", 'utf8', function (err, data) {
         if (err) throw err;
         console.log(data);
       });
@@ -90,5 +90,5 @@ function getreport(url, report){
   });
 }
 
-app.listen(5555);
+app.listen(80);
 console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
