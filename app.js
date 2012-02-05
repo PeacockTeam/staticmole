@@ -77,10 +77,11 @@ function getreport(url, report){
     console.log("repo created");
     //var jshintRun="\"C:\\Program Files (x86)\\nodejs\\node_modules\\.bin\\jshint.cmd\" test > 1.txt";
     var arr = url.split("/");
-	var jshintRun="jshint test > 1.txt"; 
+	var ar = arr[4].split(.);
+	var jshintRun="jshint test > "+ar[0]; 
     exec(jshintRun, function (error) {
       console.log("analize done");
-      fs.readFile("1.txt", "ascii", function (err, data) {
+      fs.readFile(ar[0], "ascii", function (err, data) {
         if (err) throw err;
         console.log(data);
       });
