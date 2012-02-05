@@ -75,16 +75,16 @@ function getreport(url, report){
   console.log(gitClone);
   exec(gitClone, function (error) {
     console.log("repo created");
-    var jshintRun="\"C:\\Program Files (x86)\\nodejs\\node_modules\\.bin\\jshint.cmd\" test > 1.txt";
-    //var jshintRun="jshint test > reports\\"+url+".txt"; 
+    //var jshintRun="\"C:\\Program Files (x86)\\nodejs\\node_modules\\.bin\\jshint.cmd\" test > 1.txt";
+    var jshintRun="jshint test > reports\\"+url+".txt"; 
     exec(jshintRun, function (error) {
       console.log("analize done");
-      //exec("rm -a test", function (error, stdout, stderr) {		//linux
       fs.readFile('2.txt', 'utf8', function (err, data) {
         if (err) throw err;
         console.log(data);
       });
-      exec("RD /S/Q test");
+      exec("rm -a test");  //linux
+	  //exec("RD /S/Q test");  //windows
       console.log("cleaned");  
     });
   });
