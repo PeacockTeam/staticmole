@@ -77,7 +77,7 @@ function getreport(url, report){
     console.log("repo created");
     //var jshintRun="\"C:\\Program Files (x86)\\nodejs\\node_modules\\.bin\\jshint.cmd\" test > 1.txt";
     var arr = url.split("/");
-	var ar = arr[4].split(.);
+	var ar = arr[4].split(".");
 	var jshintRun="jshint test > "+ar[0]; 
     exec(jshintRun, function (error) {
       console.log("analize done");
