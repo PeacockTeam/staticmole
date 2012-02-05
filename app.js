@@ -78,10 +78,10 @@ function getreport(url, report){
     //var jshintRun="\"C:\\Program Files (x86)\\nodejs\\node_modules\\.bin\\jshint.cmd\" test > 1.txt";
     var arr = url.split("/");
 	var ar = arr[4].split(".");
-	var jshintRun="jshint test > "+ar[0]; 
+	var jshintRun="jshint test > reports/"+ar[0]; 
     exec(jshintRun, function (error) {
       console.log("analize done");
-      fs.readFile(ar[0], "ascii", function (err, data) {
+      fs.readFile("reports/"+ar[0], "ascii", function (err, data) {
         if (err) throw err;
         console.log(data);
       });
