@@ -76,10 +76,11 @@ function getreport(url, report){
   exec(gitClone, function (error) {
     console.log("repo created");
     //var jshintRun="\"C:\\Program Files (x86)\\nodejs\\node_modules\\.bin\\jshint.cmd\" test > 1.txt";
-    var jshintRun="jshint test > reports\\"+url+".txt"; 
+    var arr = url.split("/");
+	var jshintRun="jshint test > reports\\"+arr[4]+".txt"; 
     exec(jshintRun, function (error) {
       console.log("analize done");
-      fs.readFile("reports\\"+url+".txt", 'utf8', function (err, data) {
+      fs.readFile("reports\\"+arr[4]+".txt", 'utf8', function (err, data) {
         if (err) throw err;
         console.log(data);
       });
