@@ -80,7 +80,7 @@ function getreport(url, report){
 	var jshintRun="jshint test > reports\\"+arr[4]+".txt"; 
     exec(jshintRun, function (error) {
       console.log("analize done");
-      fs.readFile("reports\\"+arr[4]+".txt", 'utf8', function (err, data) {
+      fs.readFile("reports\\"+arr[4]+".txt", "ascii", function (err, data) {
         if (err) throw err;
         console.log(data);
       });
