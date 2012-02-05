@@ -5,17 +5,8 @@ var next_beat;
 var next_onset;
 
 $().ready(function () {
-    initCanvas();
 });
 
-function initCanvas() {
-    ctx = $('#canvas')[0].getContext("2d");
-    $('#canvas').click(function() {
-        if (music) {
-            music.togglePause();
-        }
-    });
-}
 
 function resetState() {
     if (music) {
@@ -30,21 +21,22 @@ function resetCanvas() {
     fillBG('#ffffff');
 }
 
-function getRepos(url) {
-    toggleSpinner();
+function getRepo() {
+    //toggleSpinner();
 
     $.ajax({
         type: 'POST',
-        url: "/getrepos/",
-        data: { url: url },
+        url: "/report/",
+        data: { data: $("input.repo").val() },
         success: function(r) {
-            toggleSpinner();
-            
+            //toggleSpinner();
+            console.log("yep");
             if (r.error) {
                 console.log('Error: ', r.error);
             } else {
-                samples = r.samples;
-                playSong(url);
+                $("#reportItem").text(r.report);
+                console.log(r.report);
+				//playSong(url);
             }
         }
     });

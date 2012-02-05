@@ -2,8 +2,7 @@ var sys = require('sys'),
     fs = require('fs'),
     path = require('path'),
     parseUrl = require('url').parse,
-    exec = require('child_process').exec,
-    storage = require('./storage.js');
+    exec = require('child_process').exec;
 
 var version = "0.0.1";
 

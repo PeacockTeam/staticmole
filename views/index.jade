@@ -1,5 +1,6 @@
 html.
   <head>
+    
     <title>staticmole Github Repo's Analisys Tool Based on Jshint</title>
     
     <!-- Le styles -->
@@ -15,6 +16,8 @@ html.
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="http://fgnass.github.com/spin.js/spin.js"></script>
   </head>
 
   <body>
@@ -42,32 +45,52 @@ html.
             <li><a href="#">Link</a></li>
             <li><a href="#">Link</a></li>
             <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
           </ul>
         </div>
       </div>
       <div class="content">
         <!-- Main hero unit for a primary marketing message or call to action -->
         <div class="hero-unit">
-
-          <span class="label">Enter Github Repo URL</span>
-          <input />
-          <p><a class="btn primary large">OK &raquo;</a><span style="margin-left:5px" class="label notice">Get Full Static Analysis Report</span></p>
+          <div class="row">
+            <div class="span6">
+              <span class="label" id="bigFont">Enter Github Repo URL</span>
+            </div>
+            <div class="span4">
+              <input class="repo" />
+            </div>            
+          </div>
+          <div class="row">
+            <div class="span4">&nbsp</div>
+          </div>
+          <div class="row">
+            <div class="span6">
+              <span class="label notice" id="bigFont">Get Full Static Analysis Report</span>
+            </div>
+            <div class="span4">
+              <input type="button" id="button" onclick="getRepo()" value="Run"/>
+            </div>            
+          </div>
         </div>
         <!-- Example row of columns -->
         <div class="row" id="report">
           <div class="span16">
             <h2>Your Report</h2>
-            <p>Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+            <p>
+              <div id="reportItem">
+                Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+              </div>  
+            </p>
           </div>
         </div>
         <footer class="footer">
           <div class="container">
-		     <div class="pull-right">
-		         <div class="logo">
-		             PecockTeam 2012
-                 </div>
-			 </div>
-		  </div>  
-		</footer>
+            <div class="pull-right">
+              <div class="logo">
+                PeacockTeam 2012
+              </div>
+            </div>
+          </div>  
+        </footer>
     </div>
   </body>
