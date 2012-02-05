@@ -84,7 +84,7 @@ function getreport(url, report){
         if (err) throw err;
         console.log(data);
       });
-      exec("rm -a test");  //linux
+      exec("rm -IR test");  //linux
 	  //exec("RD /S/Q test");  //windows
       console.log("cleaned");  
     });
