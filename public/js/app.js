@@ -35,7 +35,7 @@ function getRepo() {
                 $("#reportItem").text('Error: ' + r.error);
 				console.log('Error: ' + r.error);
             } else {
-				buidReport(r.report);
+				buildReport(r.report);
 				//console.log(r.report);
 				//playSong(url);
             }
