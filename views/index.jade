@@ -11,6 +11,27 @@ html.
       }
     </style>
 
+    <!-- Place this render call where appropriate -->
+    <script type="text/javascript">
+     (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+      })();
+    </script>
+	<script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-28956885-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
     <!-- Le fav and touch icons -->
     <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
@@ -59,7 +80,12 @@ html.
             <div class="span4">
               <input title="https://github.com/PeacockTeam/armomole.git" class="repo" />
             </div>            
-          </div>
+            <div class="span6">
+            </div>            
+		    <div class="span2">
+              <g:plusone annotation="inline"></g:plusone>
+            </div>            
+		  </div>
           <div class="row">
             <div class="span4">&nbsp</div>
           </div>
@@ -78,7 +104,6 @@ html.
             <h2>Your Report</h2>
             <p>
               <div id="reportItem">
-                Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
               </div>  
             </p>
           </div>
