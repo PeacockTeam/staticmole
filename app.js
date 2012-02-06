@@ -59,10 +59,10 @@ app.get('/Contact', function(req, res){
 });
 
 app.post('/report/', function(req, res, next) {
-  getreport(req.body.data);
+  getreport(req.body.data, res);
 });
 
-function getreport(url, report){
+function getreport(url, res, report){
   console.log("Request handler 'analize' was called.");
   var gitClone = "git clone "+url+" test"; 
   console.log(gitClone);
