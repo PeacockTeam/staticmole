@@ -5,7 +5,7 @@ $().ready(function () {
 });
 
 function getRepo() {
-    spinner.spin($('#ReportItem'));
+    $('#divToSpin').append(spinner.el);
     console.log("spinner started");
     $.ajax({
         type: 'POST',

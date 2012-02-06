@@ -21,7 +21,7 @@ html.
         shadow: false, // Whether to render a shadow
         hwaccel: false // Whether to use hardware acceleration
       };
-      var spinner = new Spinner(opts);
+      var spinner = new Spinner(opts).spin();
     </script>
 
     <!-- Place this render call where appropriate -->
@@ -165,7 +165,7 @@ html.
             <div class="span6">
               <span class="label" id="bigFont">Enter Github Repo URL</span>
             </div>
-            <div class="span4">
+            <div class="span4" id="divToSpin">
               <input title="https://github.com/PeacockTeam/armomole.git" class="repo" />
             </div>
          </div>
