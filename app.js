@@ -64,7 +64,7 @@ app.post('/report/', function(req, res, next) {
       res.send({ "error": "failed to get report" });
 	  res.end();
 	} else {
-      res.send({ report: "  " });
+      res.send({ report: "gsdkfg" });
 	  res.end();
 	} 
   });
