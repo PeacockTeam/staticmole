@@ -72,26 +72,27 @@ function getreport(url, res, report){
     var arr = url.split("/");
 	var ar = arr[4].split(".");
 	var jshintRun="jshint test > reports/"+ar[0]; 
-    exec(jshintRun, function (error) {
+    report = "";
+	exec(jshintRun, function (error) {
       console.log("analize done");
       fs.readFile("reports/"+ar[0], "ascii", function (err, data) {
         if (err) throw err;
-        console.log(data);
-		report=data;
+        //console.log(data);
+		report+=data;
 		console.log(report);
 	  });
       exec("rm -rf test", function(error){console.log("cleaned");  });  //linux
 	  
-    if (report == null) {
-      console.log("=================================");
-	  res.send({ "error": "failed to get report" });
-	  res.end();
-	} else {
-	  console.log("**************************************");
-      console.log(report);
-	  res.send({ report: "gsdkfg" });
-	  res.end();
-	} 
+      if (report == "") {
+        console.log("=================================");
+	    res.send({ "error": "failed to get report" });
+	    res.end();
+	  } else {
+	    console.log("**************************************");
+        console.log(report);
+	    res.send({ "report": report });
+	    res.end();
+	  } 
 	  //exec("RD /S/Q test");  //windows
     });
   });
