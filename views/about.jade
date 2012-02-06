@@ -114,68 +114,51 @@ html.
         <div class="container-fluid">
           <a class="brand" href="#">staticmole</a>
           <ul class="nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="/about">About</a></li>
+            <li><a href="#">Home</a></li>
+            <li class="active"><a href="/about">About</a></li>
             <li><a href="https://github.com/PeacockTeam/staticmole">Source</a></li>
           </ul>
         </div>
       </div>
     </div>
 
-    <div class="container-fluid">
-      <div class="sidebar">
-        <div class="well">
-          <h5>Example Reports</h5>
-          <ul>
-            <li><a href="http://staticmole.org/reports/crossroads.html">crossroads</a></li>
-            <li><a href="http://staticmole.org/reports/NServe.html">NServe</a></li>
-            <li><a href="http://staticmole.org/reports/armomole.html">armomole</a></li>
-            <li><a href="http://staticmole.org/reports/node-router.html">node-router</a></li>
-            <li><a href="http://staticmole.org/reports/sherpa.html">sherpa</a></li>
-            <li><a href="http://staticmole.org/reports/fab.html">fab</a></li>
-          </ul>
+    <div class="container page">
+      <div class="row">
+        <div class="span4 columns">
+          <h2>About staticmole</h2>
+
+          <p>Staticmole is a community-driven tool to detect errors and potential problems in Open Source
+          code hosted in github repositories.</p>
+          <p>At the moment it could analize javascript using <a href="jshint.org">JSHint</a> and <a href="jshint.org">JSLint</a>.</p>
+          <p>We are going to extend the list of tackled languages (Java, C, C++, etc)</p>
+          <p>Staticmole uses node.js and originally was created to check <a href="https://github.com/joyent/node/wiki/modules">the nodejs modules</a></p>
         </div>
-      </div>
-      <div class="content">
-        <!-- Main hero unit for a primary marketing message or call to action -->
-        <div class="hero-unit">
-          <div class="row">   
-            <div class="span16">
-              <g:plusone annotation="inline"></g:plusone>
-            </div>
-          </div>
-          <div class="row">
-            <div class="span4">&nbsp</div>
-          </div>
-          <div class="row">
-            <div class="span6">
-              <span class="label" id="bigFont">Enter Github Repo URL</span>
-            </div>
-            <div class="span4">
-              <input title="https://github.com/PeacockTeam/armomole.git" class="repo" />
-            </div>
-         </div>
-          <div class="row">
-            <div class="span4">&nbsp</div>
-          </div>
-          <div class="row">
-            <div class="span6">
-              <span class="label notice" id="bigFont">Get Full Static Analysis Report</span>
-            </div>
-            <div class="span4">
-              <input type="button" id="button" onclick="getRepo()" value="Run"/>
-            </div>            
-          </div>
+
+        <div class="span4 columns">
+          <h2>Big thanks</h2>
+
+          <p>Big thanks to the whole Open Source Community and especially to the projects we're using in staticmole</p>
+          <p>Thanks to the <a href="http://ibks.ftk.spbstu.ru/">Information Security in Computer Systems department</a> of
+		  <a href="http://www.spbstu-eng.ru">Saint-Petersburg State Politechnical Univercity</a></p>
         </div>
-        <!-- Example row of columns -->
-        <div class="row" id="report">
-          <div class="span16">
-            <h2>Your Report</h2>
-            <p>
-              <div id="reportItem">
-              </div>  
-            </p>
-          </div>
+
+        <div class="span4 columns">
+          <h2>Our Goal</h2>
+
+          <p>Our goal is to help JavaScript developers write complex programs without
+          worrying about typos and language gotchas.</p>
+
+          <p>We believe that static code analysis programs&mdash;as well as other code quality
+          tools&mdash;are important and beneficial to the JavaScript community and, thus, should not
+          alienate their users.</p>
+        </div>
+
+        <div class="span4 columns">
+          <h2>Team</h2>
+
+          <p><strong>PeacockTeam</strong>, making the world better.<br>
+          <a href="http://PeacockTeam.org">BC</a>, <a href="http://www.GoodRoads.ru/">GoodRoads</a>.</p>
+
         </div>
       </div>
     </div>
