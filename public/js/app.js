@@ -34,7 +34,8 @@ function getRepo() {
             if (r.error) {
                 console.log('Error: ', r.error);
             } else {
-                $("#reportItem").text(r.report);
+                
+				$("#reportItem").text("blablabla");
                 console.log(r.report);
 				//playSong(url);
             }

@@ -43,7 +43,7 @@ function addHeaders(res) {
 
 app.all('/*',function(req, res, next) {
     addHeaders(res);
-    next();
+    next(); 
 });
 
 app.get('/', function(req, res){
@@ -63,14 +63,13 @@ app.post('/report/', function(req, res, next) {
     if (report == null) {
       res.send({ "error": "failed to get report" });
     } else {
-      res.send({ report: report });
+      res.send({ report: "  " });
     } 
   });
 });
 
 function getreport(url, report){
   console.log("Request handler 'analize' was called.");
-  var report="";
   var gitClone = "git clone "+url+" test"; 
   console.log(gitClone);
   exec(gitClone, function (error) {
@@ -84,7 +83,8 @@ function getreport(url, report){
       fs.readFile("reports/"+ar[0], "ascii", function (err, data) {
         if (err) throw err;
         console.log(data);
-      });
+		report=data;
+	  });
       exec("rm -rf test", function(error){console.log("cleaned");  });  //linux
 	  //exec("RD /S/Q test");  //windows
     });
