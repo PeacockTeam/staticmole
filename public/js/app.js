@@ -16,7 +16,7 @@ var opts = {
   hwaccel: false // Whether to use hardware acceleration
 };
 var target = document.getElementById('reportItem');
-var spinner = new Spinner(opts);
+var spinner = new Spinner(opts).spin(target);
 
 $().ready(function () {
 });
