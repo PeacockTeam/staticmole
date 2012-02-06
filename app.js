@@ -59,7 +59,7 @@ app.get('/Contact', function(req, res){
 });
 
 app.post('/report/', function(req, res, next) {
-  getreport(req.body.data, report);
+  getreport(req.body.data);
 });
 
 function getreport(url, report){
