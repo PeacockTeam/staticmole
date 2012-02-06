@@ -4,6 +4,20 @@ var samples;
 var next_beat;
 var next_onset;
 
+var opts = {
+  lines: 12, // The number of lines to draw
+  length: 7, // The length of each line
+  width: 5, // The line thickness
+  radius: 10, // The radius of the inner circle
+  color: '#000', // #rgb or #rrggbb
+  speed: 1, // Rounds per second
+  trail: 60, // Afterglow percentage
+  shadow: false, // Whether to render a shadow
+  hwaccel: false // Whether to use hardware acceleration
+};
+var target = document.getElementById('reportItem');
+var spinner = new Spinner(opts);
+
 $().ready(function () {
 });
 
@@ -22,14 +36,14 @@ function resetCanvas() {
 }
 
 function getRepo() {
-    //toggleSpinner();
+    spinner.spin();
 
     $.ajax({
         type: 'POST',
         url: "/report/",
         data: { data: $("input.repo").val() },
         success: function(r) {
-            //toggleSpinner();
+            spinner.stop();
             console.log("yep");
             if (r.error) {
                 $("#reportItem").text('Error: ' + r.error);
