@@ -79,10 +79,9 @@ function getreport(url, res, report){
         if (err) throw err;
         //console.log(data);
 		report+=data;
-		console.log(report);
 	  });
       exec("rm -rf test", function(error){console.log("cleaned");  });  //linux
-	  
+	  console.log(report);
       if (report == "") {
         console.log("=================================");
 	    res.send({ "error": "failed to get report" });
