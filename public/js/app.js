@@ -44,5 +44,11 @@ function getRepo() {
 }
 
 function buildReport(report){
-  $("#reportItem").text(report);
+  var i;
+  reportArr=report.split("\r");
+  
+  //for ( i=0; i<reportArr.length; i++){
+  
+  //}
+  $("#reportItem").text(reportArr.join("\n"));
 }              
