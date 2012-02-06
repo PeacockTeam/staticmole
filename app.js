@@ -62,9 +62,11 @@ app.post('/report/', function(req, res, next) {
   getreport(req.body.data, function(report) {
     if (report == null) {
       res.send({ "error": "failed to get report" });
-    } else {
+	  res.end();
+	} else {
       res.send({ report: "  " });
-    } 
+	  res.end();
+	} 
   });
 });
 
