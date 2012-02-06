@@ -9,6 +9,20 @@ html.
         padding-top: 60px;
       }
     </style>
+    <script>
+      var opts = {
+        lines: 12, // The number of lines to draw
+        length: 7, // The length of each line
+        width: 5, // The line thickness
+        radius: 10, // The radius of the inner circle
+        color: '#000', // #rgb or #rrggbb
+        speed: 1, // Rounds per second
+        trail: 60, // Afterglow percentage
+        shadow: false, // Whether to render a shadow
+        hwaccel: false // Whether to use hardware acceleration
+      };
+      var spinner = new Spinner(opts);
+    </script>
 
     <!-- Place this render call where appropriate -->
     <script type="text/javascript">
@@ -112,9 +126,9 @@ html.
     <div class="topbar">
       <div class="topbar-inner">
         <div class="container-fluid">
-          <a class="brand" href="#">staticmole</a>
+          <a class="brand" href="/">staticmole</a>
           <ul class="nav">
-            <li class="active"><a href="#">Home</a></li>
+            <li class="active"><a href="/">Home</a></li>
             <li><a href="/about">About</a></li>
             <li><a href="https://github.com/PeacockTeam/staticmole">Source</a></li>
           </ul>
