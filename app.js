@@ -61,10 +61,13 @@ app.get('/Contact', function(req, res){
 app.post('/report/', function(req, res, next) {
   getreport(req.body.data, function(report) {
     if (report == null) {
-      res.send({ "error": "failed to get report" });
+      console.log("=================================");
+	  res.send({ "error": "failed to get report" });
 	  res.end();
 	} else {
-      res.send({ report: "gsdkfg" });
+	  console.log("**************************************");
+      console.log(report);
+	  res.send({ report: "gsdkfg" });
 	  res.end();
 	} 
   });
