@@ -36,22 +36,20 @@ function resetCanvas() {
 }
 
 function getRepo() {
-    spinner.spin();
-
+    spinner.spin(target);
+    console.log("spinner started");
     $.ajax({
         type: 'POST',
         url: "/report/",
         data: { data: $("input.repo").val() },
         success: function(r) {
-            spinner.stop();
-            console.log("yep");
+            spinner.stop(target);
+			console.log("spinner stopped");
             if (r.error) {
                 $("#reportItem").text('Error: ' + r.error);
 				console.log('Error: ' + r.error);
             } else {
 				buildReport(r.report);
-				//console.log(r.report);
-				//playSong(url);
             }
         }
     });
