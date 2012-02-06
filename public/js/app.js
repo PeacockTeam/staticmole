@@ -32,10 +32,10 @@ function getRepo() {
             //toggleSpinner();
             console.log("yep");
             if (r.error) {
-                console.log('Error: ', r.error);
+                $("#reportItem").text("blablaba");
+				console.log('Error: ', r.error);
             } else {
-                
-				$("#reportItem").text("blablabla");
+				$("#reportItem").text(r.report);
                 console.log(r.report);
 				//playSong(url);
             }
