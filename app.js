@@ -50,12 +50,8 @@ app.get('/', function(req, res){
       res.render('index', { title: 'StaticMole Based on Jshint' });
 });
 
-app.get('/About', function(req, res){
-      res.render('index', { title: 'StaticMole Based on Jshint' });
-});
-
-app.get('/Contact', function(req, res){
-      res.render('index', { title: 'StaticMole Based on Jshint' });
+app.get('/about', function(req, res){
+      res.render('about', { title: 'StaticMole Based on Jshint' });
 });
 
 app.post('/report/', function(req, res, next) {
