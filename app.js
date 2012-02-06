@@ -83,12 +83,9 @@ function getreport(url, res, report){
 		  report+=data;
 	      console.log(report);
           if (report == "") {
-            console.log("=================================");
-	        res.send({ "error": "failed to get report" });
+            res.send({ "error": "failed to get report" });
 	        res.end();
 	      } else {
-	        console.log("**************************************");
-            console.log(report);
 	        res.send({ "report": report });
 	        res.end();
 	      } 

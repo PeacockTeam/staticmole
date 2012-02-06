@@ -32,8 +32,8 @@ function getRepo() {
             //toggleSpinner();
             console.log("yep");
             if (r.error) {
-                $("#reportItem").text('Error: ', r.error);
-				console.log('Error: ', r.error);
+                $("#reportItem").text('Error: ' + r.error);
+				console.log('Error: ' + r.error);
             } else {
 				$("#reportItem").text(r.report);
                 console.log(r.report);
