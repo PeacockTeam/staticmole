@@ -50,5 +50,5 @@ function buildReport(report){
   //for ( i=0; i<reportArr.length; i++){
   
   //}
-  $("#reportItem").text(reportArr.join("<br>"));
+  $("#reportItem").html(reportArr.join("<br>"));
 }              
