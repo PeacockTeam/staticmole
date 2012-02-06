@@ -45,7 +45,7 @@ function getRepo() {
 
 function buildReport(report){
   var i;
-  reportArr=report.split("\r");
+  reportArr=report.split("\n");
   
   //for ( i=0; i<reportArr.length; i++){
   
