@@ -78,6 +78,7 @@ function getreport(url, report){
         if (err) throw err;
         console.log(data);
 		report=data;
+		console.log(report);
 	  });
       exec("rm -rf test", function(error){console.log("cleaned");  });  //linux
 	  
