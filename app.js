@@ -64,37 +64,44 @@ app.post('/report/', function(req, res, next) {
 
 function getreport(url, res, report){
   console.log("Request handler 'analize' was called.");
-  var gitClone = "git clone "+url+" test"; 
-  console.log(gitClone);
-  exec(gitClone, function (error) {
-    console.log("repo created");
-    //var jshintRun="\"C:\\Program Files (x86)\\nodejs\\node_modules\\.bin\\jshint.cmd\" test > 1.txt";
-    var arr = url.split("/");
-	var ar = arr[4].split(".");
-	var jshintRun="jshint test > reports/"+ar[0]; 
-    report = "";
-	exec(jshintRun, function (error) {
-      console.log("analize done");
-      fs.readFile("reports/"+ar[0], "ascii", function (err, data) {
-        if (err) throw err;
-        //console.log(data);
-		report+=data;
-	    console.log(report);
-        if (report == "") {
-          console.log("=================================");
-	      res.send({ "error": "failed to get report" });
-	      res.end();
-	    } else {
-	      console.log("**************************************");
-          console.log(report);
-	      res.send({ "report": report });
-	      res.end();
-	    } 
-	  });
-      exec("rm -rf test", function(error){console.log("cleaned");  });  //linux
-	  //exec("RD /S/Q test");  //windows
+  if(url.indexOf('github.com') + 1) {
+  
+    var gitClone = "git clone "+url+" test"; 
+    console.log(gitClone);
+    exec(gitClone, function (error) {
+      console.log("repo created");
+      //var jshintRun="\"C:\\Program Files (x86)\\nodejs\\node_modules\\.bin\\jshint.cmd\" test > 1.txt";
+      var arr = url.split("/");
+	  var ar = arr[ arr.length - 1 ].split(".");
+	  var jshintRun="jshint test > reports/"+ar[0]; 
+      report = "";
+	  exec(jshintRun, function (error) {
+        console.log("analize done");
+        fs.readFile("reports/"+ar[0], "ascii", function (err, data) {
+          if (err) throw err;
+          //console.log(data);
+		  report+=data;
+	      console.log(report);
+          if (report == "") {
+            console.log("=================================");
+	        res.send({ "error": "failed to get report" });
+	        res.end();
+	      } else {
+	        console.log("**************************************");
+            console.log(report);
+	        res.send({ "report": report });
+	        res.end();
+	      } 
+	    });
+        exec("rm -rf test", function(error){console.log("cleaned");  });  //linux
+	    //exec("RD /S/Q test");  //windows
+      });
     });
-  });
+  }
+  else {
+    res.send({ "error": "invalid url" });
+	res.end();      
+  }
 }
 
 app.listen(5555);
