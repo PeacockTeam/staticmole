@@ -59,18 +59,7 @@ app.get('/Contact', function(req, res){
 });
 
 app.post('/report/', function(req, res, next) {
-  getreport(req.body.data, function(report) {
-    if (report == null) {
-      console.log("=================================");
-	  res.send({ "error": "failed to get report" });
-	  res.end();
-	} else {
-	  console.log("**************************************");
-      console.log(report);
-	  res.send({ report: "gsdkfg" });
-	  res.end();
-	} 
-  });
+  getreport(req.body.data, function(report));
 });
 
 function getreport(url, report){
@@ -91,6 +80,17 @@ function getreport(url, report){
 		report=data;
 	  });
       exec("rm -rf test", function(error){console.log("cleaned");  });  //linux
+	  
+    if (report == null) {
+      console.log("=================================");
+	  res.send({ "error": "failed to get report" });
+	  res.end();
+	} else {
+	  console.log("**************************************");
+      console.log(report);
+	  res.send({ report: "gsdkfg" });
+	  res.end();
+	} 
 	  //exec("RD /S/Q test");  //windows
     });
   });
