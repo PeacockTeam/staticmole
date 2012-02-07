@@ -60,7 +60,7 @@ app.post('/report/', function(req, res, next) {
 
 function getreport(url, res, report){
   console.log("Request handler 'analize' was called.");
-  if (((url.indexOf('github.com') + 1))&&(!(url.indexOf('>')+1))) {
+  if (((url.indexOf('github.com') + 1))&&(!(url.indexOf(' ')+1))&&(!(url.indexOf('>')+1))) {
   
     var gitClone = "git clone "+url+" test"; 
     console.log(gitClone);
