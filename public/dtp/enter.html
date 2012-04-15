@@ -1,0 +1,121 @@
+<html>
+<head>
+<title>Статистика</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="http://code.jquery.com/jquery-ui-1.8.16.custom.min.js"></script>
+    <link rel="stylesheet" href="http://www.highcharts.com/highslide/highslide.css"></script>
+	    <link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css"></link>
+    <script src="http://www.highcharts.com/highslide/highslide-full.min.js"></script>
+    <script src="testing-stock-exporting.js"></script>
+    <script src="http://www.highcharts.com/highslide/highslide.config.js"></script>
+    <script src="http://www.highcharts.com/js/modules/exporting.js"></script>
+
+</head>
+
+<body>
+
+<div class="topbar">
+	<div class="topbar-inner">
+		<div class="container">
+			<a class="brand" href="#">Статистика</a>
+			<ul class="nav">
+            <li><a href="index.html">Настройки системы</a></li>
+			<li class="active"><a href="enter.html">Ввод данных</a></li>
+            <li><a href="dtp.html">График ДТП</a></li>
+            <li><a href="types.html">Виды ДТП</a></li>
+			<li><a href="table.html">Сводная таблица</a></li>
+          </ul>
+		</div>
+	</div>
+</div>
+
+<div id="container">
+<br><br><br>
+<div class="row">
+<div class="span3">
+<label>Дата </label>
+</div>
+<div class="span3"><input style="width : 200"></input></div>
+</div>
+<div class="row">
+<div class="span3">
+<label>Время </label></div>
+<div class="span3"><input ></input></div></div>
+<div class="row">
+<div class="span3">
+<label>Место </label></div>
+<div class="span3"><input ></input></div></div>
+<div class="row">
+<div class="span3">
+<label>Погибло </label></div>
+<div class="span3"><input></input></div></div>
+<div class="row">
+<div class="span3">
+<label>Ранено </label></div>
+<div class="span3"><input></input></div></div>
+<div class="row">
+<div class="span3">
+<label>Вид ДТП </label></div>
+<div class="span3">
+<form>
+        <select name="ComboBox" style="width : 200">
+        <option value="1" selected>Столкновение</option>
+        <option value="2">Опрокидывание</option>
+        <option value="3">Наезд на препятствие</option>
+        <option value="4">Наезд на стоящее ТС</option>
+        <option value="5">Наезд на пешехода</option>
+        <option value="6">Наезд на велосипедиста</option>
+        <option value="7">Наезд на гужевой транспорт</option>
+        <option value="8">Наезд на животных</option>
+        <option value="9">Прочие происшествия</option>
+		<option value="10">Нет данных</option>
+		</select>
+</form></div></div>
+<div class="row">
+<div class="span3">
+<label>Состояние покрытия </label></div>
+<div class="span3">
+<form>
+        <select name="ComboBox" style="width : 200">
+        <option value="1" selected>Сухое</option>
+        <option value="2">Мокрое</option>
+        <option value="3">Загрязненное</option>
+        <option value="4">Свежеуложенная поверхностная обработка</option>
+        <option value="5">Заснеженное</option>
+        <option value="6">Гололедица</option>
+        <option value="7">Обработано противогололедным материалом</option>
+        <option value="8">Со снежным накатом</option>
+        <option value="9">Нет данных</option>
+		</select>
+</form></div></div>
+<div class="row">
+<div class="span3">
+<label>Наличие освещения </label></div>
+<div class="span3">
+<form>
+        <select name="ComboBox" style="width : 200">
+        <option value="1" selected>Светлое время суток</option>
+        <option value="2">Включено</option>
+        <option value="3">Не включено</option>
+        <option value="4">Отсутствует</option>
+        <option value="5">Нет данных</option>
+		</select>
+</form></div></div>
+<div class="row">
+<div class="span3">
+<label>Погодные условия </label></div>
+<div class="span3">
+<form>
+        <select name="ComboBox" style="width : 200">
+        <option value="1" selected>Ясно</option>
+        <option value="2">Пасмурно</option>
+        <option value="3">Туман</option>
+        <option value="4">Дождь</option>
+        <option value="5">Снегопад</option>
+		<option value="6">Нет данных</option>
+		</select>
+</form></div></div>
+</div>
+</body>
+</html>
