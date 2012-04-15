@@ -1,0 +1,153 @@
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <link rel="stylesheet" href="http://www.highcharts.com/highslide/highslide.css"></script>
+    <script src="http://www.highcharts.com/highslide/highslide-full.min.js"></script>
+    <script src="testing-stock-exporting.js"></script>
+    <script src="http://www.highcharts.com/highslide/highslide.config.js"></script>
+    <script src="http://www.highcharts.com/js/modules/exporting.js"></script>
+
+<script type="text/javascript">
+console.log('qweqw');
+
+$(function () {
+    var chart;
+	var road="Кола"
+	var i;
+	var categ = new Array();
+	for(i=0;i++;i<180){
+	categ[i]=i;
+	}
+
+	chart = new Highcharts.Chart({
+
+		chart: {
+
+			renderTo: 'container',
+
+			type: 'column'
+
+		},
+
+		title: {
+
+			text: 'Статистика по ДТП ' + road
+
+		},
+
+		xAxis: {
+
+			categories: categ
+
+		},
+
+		yAxis: {
+
+			min: 0,
+
+			title: {
+
+				text: 'Общее число ДТП'
+
+			},
+
+			stackLabels: {
+
+				enabled: true,
+
+				style: {
+
+					fontWeight: 'bold',
+
+					color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
+
+				}
+
+			}
+
+		},
+
+		legend: {
+
+			align: 'right',
+
+			x: -100,
+
+			verticalAlign: 'top',
+
+			y: 20,
+
+			floating: true,
+
+			backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColorSolid) || 'white',
+
+			borderColor: '#CCC',
+
+			borderWidth: 1,
+
+			shadow: false
+
+		},
+
+		tooltip: {
+
+			formatter: function() {
+
+				return '<b>'+ this.x +'</b><br/>'+
+
+					this.series.name +': '+ this.y +'<br/>'+
+
+					'Total: '+ this.point.stackTotal;
+
+			}
+
+		},
+
+		plotOptions: {
+
+			column: {
+
+				stacking: 'normal',
+
+				dataLabels: {
+
+					enabled: true,
+
+					color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white'
+
+				}
+
+			}
+
+		},
+
+		series: [{
+
+			name: 'Пешеход',
+
+			data: [5, 3, 4, 7, 2, 3, 4, 7, 2, 3, 4, 7, 2, 3, 4, 7, 2, 3, 4, 7, 2, 3, 4, 7, 2, 3, 4, 7, 2, 3, 4, 7]
+
+		}, {
+
+			name: 'Столкновение',
+
+			data: [2, 2, 3, 2, 1, 2, 3, 2, 1, 2, 3, 2, 1, 2, 3, 2, 1, 2, 3, 2, 1, 2, 3, 2, 1, 2, 3, 2, 1, 2, 3, 2, 1]
+
+		}, {
+
+			name: 'Переворот',
+
+			data: [3, 4, 4, 2, 5, 2, 3, 2, 1, 2, 3, 2, 1, 2, 3, 2, 1, 2, 3, 2, 1, 2, 3, 2, 1, 2, 3, 2, 1, 2, 3, 2, 1]
+
+		}]
+
+	});
+});
+</script>
+</head>
+
+<body>
+<div id="container">
+</div>
+</body>
+</html>
