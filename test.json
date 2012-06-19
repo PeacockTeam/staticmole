@@ -1,0 +1,129 @@
+data:{
+        analyzedNumber:{
+            number:"9219120770",
+            numberName:"",
+            numberType:"Telephone"
+        },
+        timePeriod:{
+            since:1136059200000,
+            to:1183147200000
+        },
+
+        summary:{
+            distrByDestPlot:null,
+            distrByTypePlot:null,
+            distrByDurPlot:null,
+            popularPlaces:[
+                {
+                    address:"улица Уточкина, Озеро Долгое, 68, Приморский район, Saint Petersburg, Северо-Западный федеральный округ, Russian Federation",
+                    popularity:27
+                }
+            ],
+            vectors:{
+                systemNumbers:[
+                    {
+                        number:"",
+                        numberName:"",
+                        numberType:"System",
+                        usagePeriods:[]
+                    }
+                ],
+                telephoneNumbers:[
+                    {
+                        number:"9219120770",
+                        numberName:"",
+                        numberType:"Telephone"
+                    }
+                ],
+                temporaryNumbers:[
+                    {
+                        number:"",
+                        numberName:"",
+                        numberType:"Temporary",
+                        usagePeriods:[]
+                    }
+                ],
+                terminalNumbers:[
+                    {
+                        number:"",
+                        numberName:"",
+                        numberType:"Terminal",
+                        usagePeriods:[]
+                    }
+                ]
+            },
+            bsStat:{
+                badBS:"5.90% (58)",
+                badCalls:"27.53% (3167)",
+                goodBS:"94.10% (925)",
+                goodCalls:"72.47% (8335)"
+            },
+            talkers:[
+                ["79219191370", "Россия, СанктПетербург, СевероЗападный филиал ОАО 'МегаФон'", "908"]
+            ],
+            totalCalls:11502
+        },
+
+        map:{
+            areas:[
+                {
+                    address:"проспект Обуховской Обороны, Щемиловка, Невская застава, Невский район, Saint Petersburg, Северо-Западный федеральный округ, Russian Federation",
+                    callsNumber:8328,
+                    screenShot:null
+                }
+            ],
+            places:[
+                {
+                    activity:null,
+                    address:"улица Уточкина, Озеро Долгое, 68, Приморский район, Saint Petersburg, Северо-Западный федеральный округ, Russian Federation",
+                    averageTime:"1 ч. 9 мин.",
+                    map:null,
+                    poi:[
+                        {
+                            tags:[
+                                {
+                                    k:"colour",
+                                    v:"purple"
+                                }
+                            ]
+                        }
+                    ],
+                    quantity:2203,
+                    type:"stationar",
+                    visitations:[
+                        {
+                            calls:[
+                                {
+                                    callDirection:"Входящий",
+                                    callID:11,
+                                    companionNumber:"994502000500",
+                                    duration:0,
+                                    serviceType:"SMS",
+                                    timestamp:1136122649000
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+
+        dynamics:{
+            abonents:[
+                {
+                    abonent:"79219191370",
+                    count:771,
+                    screenShot:null
+                }
+            ],
+            regions:[
+                {
+                    count:3349,
+                    region:"Россия, СанктПетербург, СевероЗападный филиал ОАО 'МегаФон'",
+                    screenShot:null
+                }
+            ],
+            distrByCallsPlot:null,
+            distrByDurPlot:null
+        }
+    }
