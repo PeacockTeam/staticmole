@@ -15,7 +15,7 @@ data:{
             distrByDurPlot:null,
             popularPlaces:[
                 {
-                    address:"улица Уточкина, Озеро Долгое, 68, Приморский район, Saint Petersburg, Северо-Западный федеральный округ, Russian Federation",
+                    address:"aaaaaaaa",
                     popularity:27
                 }
             ],
@@ -59,7 +59,7 @@ data:{
                 goodCalls:"72.47% (8335)"
             },
             talkers:[
-                ["79219191370", "Россия, СанктПетербург, СевероЗападный филиал ОАО 'МегаФон'", "908"]
+                ["79219191370", "ssssssssss", "908"]
             ],
             totalCalls:11502
         },
@@ -67,7 +67,7 @@ data:{
         map:{
             areas:[
                 {
-                    address:"проспект Обуховской Обороны, Щемиловка, Невская застава, Невский район, Saint Petersburg, Северо-Западный федеральный округ, Russian Federation",
+                    address:"sssddddddd",
                     callsNumber:8328,
                     screenShot:null
                 }
@@ -75,8 +75,8 @@ data:{
             places:[
                 {
                     activity:null,
-                    address:"улица Уточкина, Озеро Долгое, 68, Приморский район, Saint Petersburg, Северо-Западный федеральный округ, Russian Federation",
-                    averageTime:"1 ч. 9 мин.",
+                    address:"sdfagsdfg",
+                    averageTime:"123123
                     map:null,
                     poi:[
                         {
@@ -94,7 +94,7 @@ data:{
                         {
                             calls:[
                                 {
-                                    callDirection:"Входящий",
+                                    callDirection:"ef",
                                     callID:11,
                                     companionNumber:"994502000500",
                                     duration:0,
@@ -119,7 +119,7 @@ data:{
             regions:[
                 {
                     count:3349,
-                    region:"Россия, СанктПетербург, СевероЗападный филиал ОАО 'МегаФон'",
+                    region:"asdfasfasf
                     screenShot:null
                 }
             ],
